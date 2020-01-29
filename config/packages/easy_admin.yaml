@@ -1,0 +1,8 @@
+easy_admin:
+    entities:
+        - App\Entity\Blog
+        - App\Entity\Infos
+        - App\Entity\Project
+        - App\Entity\Skills
+
+
