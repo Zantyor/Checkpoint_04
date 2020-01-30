@@ -9,7 +9,7 @@
             <div class="container">
                 <nav class="navbar">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">OBELA</a>
+                        <a class="navbar-brand" href="#">DEVLOVERS</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -66,45 +66,15 @@
                         </ul>
                     </div>
                 </nav>
-
-                {#<nav class="navbar navbar-expand-lg ">
-                  <a class="navbar-brand" href="#">OBELA</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">A propos de moi</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Mes compétences</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Mes projets</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Me contacter</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>#}
                 <div class="header__content text-center">
-                    <span class="header__content__block">HELLO</span>
-                    <h1 class="header__content__title">I'M JOHNNY D. DORSCH</h1>
+                    <span class="header__content__block">BONJOUR</span>
+                    <h1 class="header__content__title">Je suis Côme de Mauroy</h1>
                     <ul class="header__content__sub-title">
-                        <li>UI&#47;UX DESIGNER <span class="padding">&#45;</span></li>
-                        <li>WEB DEVELOPER <span class="padding">&#45;</span></li>
-                        <li>PHOTOGRAPHAR</li>
+                        <li>SCRUM MASTER<span class="padding">&#45;</span></li>
+                        <li>BACK END DEVELOPER<span class="padding">&#45;</span></li>
+                        <li>DEV OPS</li>
                     </ul>
-                    <a class="header__button" href="#">HAVE PROJECT? LET'S TALK</a>
+                    <a class="header__button" href="#">VOUS AVEZ UN PROJET ? PARLONS-EN</a>
                 </div>
                 <div class="social-icon pull-right">
                     <ul>
@@ -120,7 +90,7 @@
         <section class="about">
             <div class="container about__container--narrow">
                 <div class="page-section">
-                    <h2 class="page-section__title">ABOUT ME</h2>
+                    <h2 class="page-section__title">A PROPOS DE MOI</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -137,12 +107,12 @@
                                 aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
                             <div class="row row--margin-top">
                                 <div class="col-md-4">
-                                    <p class="about__bio"><strong>NAME :</strong> Jonny D. Dorsch</p>
-                                    <p class="about__bio"><strong>AGE :</strong> 21</p>
+                                    <p class="about__bio"><strong>NAME :</strong> Côme de Mauroy</p>
+                                    <p class="about__bio"><strong>AGE :</strong> {{ infos[0].age }}</p>
                                 </div>
                                 <div class="col-md-4">
-                                    <p class="about__bio"><strong>JOB TITLE :</strong> UI&#47;UX Designer</p>
-                                    <p class="about__bio"><strong>LOCATION :</strong> California,USA</p>
+                                    <p class="about__bio"><strong>JOB TITLE :</strong> {{ infos[0].job }}</p>
+                                    <p class="about__bio"><strong>LOCATION :</strong> {{ infos[0].location }}</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -162,7 +132,7 @@
         <section class="skill skill--bg">
             <div class="container skill__container--narrow">
                 <div class="page-section">
-                    <h2 class="page-section__title page-section__title--white">MY SKILL</h2>
+                    <h2 class="page-section__title page-section__title--white">MES COMPETENCES</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style-white.png') }}"
                          alt="">
                     <p class="page-section__paragraph page-section__paragraph--white">Lorem ipsum dolor sit amet,
@@ -210,7 +180,7 @@
         <section class="portfolio">
             <div class="container">
                 <div class="page-section">
-                    <h2 class="page-section__title">MY PORTFOLIO</h2>
+                    <h2 class="page-section__title">MON PORTFOLIO</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -330,7 +300,7 @@
         <section class="blog">
             <div class="container">
                 <div class="page-section">
-                    <h2 class="page-section__title">BLOG POST</h2>
+                    <h2 class="page-section__title">MES ARTICLES</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
