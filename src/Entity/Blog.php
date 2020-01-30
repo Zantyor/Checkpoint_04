@@ -29,7 +29,12 @@ class Blog
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $image;
+    private $img;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $link;
 
     public function getId(): ?int
     {
@@ -60,14 +65,26 @@ class Blog
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImg(): ?string
     {
-        return $this->image;
+        return $this->img;
     }
 
-    public function setImage(?string $image): self
+    public function setImg(?string $img): self
     {
-        $this->image = $image;
+        $this->img = $img;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(?string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }

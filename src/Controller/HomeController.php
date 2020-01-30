@@ -9,7 +9,6 @@ use App\Repository\SkillsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Unirest;
 
 class HomeController extends AbstractController
 {
@@ -33,18 +32,11 @@ class HomeController extends AbstractController
         $articles = $blogRepository->findAll();
         $infos = $infosRepository->findAll();
 
-        $response = Unirest\Request::get('https://api.github.com/users/Zantyor/repos');
-
-        $toto = $response->body;
-        $repos = array_slice($toto,(count($toto)-5));
-
-
         return $this->render('home/index.html.twig', [
             'projects' => $allProjects,
             'skills' => $allSkills,
             'articles' => $articles,
             'infos' => $infos,
-            'repos' => $repos
         ]);
     }
 }

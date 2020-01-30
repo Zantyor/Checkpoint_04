@@ -12,6 +12,12 @@ easy_admin:
                     - {property: 'img', type: 'file'}
         Blog:
             class: App\Entity\Blog
+            new:
+                fields:
+                    - {property: 'Title'}
+                    - {property: 'content'}
+                    - {property: 'link'}
+                    - {property: 'img'}
         Skills:
             class: App\Entity\Skills
             new:

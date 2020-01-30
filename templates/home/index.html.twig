@@ -16,7 +16,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                     </div>
-                    <div class="d-md-none">
+                    <div class="d-md-none d-sm-block">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -43,7 +43,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="d-md-block d-sm-none">
+                    <div class="d-md-block d-none">
                         <ul class="nav">
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
@@ -76,14 +76,6 @@
                     </ul>
                     <a class="header__button" href="mailto:{{ infos[0].mail }}">VOUS AVEZ UN PROJET ? PARLONS-EN</a>
                 </div>
-                <div class="social-icon pull-right">
-                    <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-behance-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                    </ul>
-                </div>
             </div>
         </header>
 
@@ -113,14 +105,6 @@
                                 <div class="col-md-4">
                                     <p class="about__bio"><strong>JOB TITLE :</strong> {{ infos[0].job }}</p>
                                     <p class="about__bio"><strong>LOCATION :</strong> {{ infos[0].location }}</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <a class="button button--colorful button--margin" href="#">DOWNLOAD CV</a>
-                                </div>
-                                <div class="col-md-4">
-                                    <a class="button button--colorful button--margin" href="#">HIRE ME</a>
                                 </div>
                             </div>
                         </div>
@@ -227,42 +211,17 @@
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     <div class="row gutters-40">
+                        {% for article in articles %}
                         <div class="col-md-4">
                             <div class="thumbnail text-center">
-                                <img class="img-responsive" src="{{ asset('build/images/blog-1.png') }}" alt="">
-                                <p class="blog__single__date">MAY 25 , 2017 </p>
-                                <i class="material-icons">comment</i> 5
-                                <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-                                <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam
+                                <img class="img-responsive" src="{{ article.img}}" alt="" style="height: fit-content; width: fit-content">
+                                <a href="#"><h4 class="blog__single__title">{{article.title}}</h4></a>
+                                <p class="blog__single__paragraph">{{ article.content }}
                                     <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail text-center">
-                                <img src="{{ asset('build/images/blog-2.png') }}" alt="">
-                                <p class="blog__single__date">MAY 25 , 2017 </p>
-                                <i class="material-icons">comment</i> 5
-                                <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-                                <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam
-                                    <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail text-center">
-                                <img src="{{ asset('build/images/blog-3.png') }}" alt="">
-                                <p class="blog__single__date">MAY 25 , 2017 </p>
-                                <i class="material-icons">comment</i> 5
-                                <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-                                <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing
-                                    elit, sed do eiusmod tempor incididunt ut labore et dolore Ut enim ad minim veniam
-                                    <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a>
-                                </p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -280,14 +239,6 @@
             </div>
             <hr style="border: 0;border-top: 1px solid #525B60;display:block;margin-top: 40px;">
             <div class="container text-center">
-                <div class="social-icon">
-                    <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-behance-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                    </ul>
-                </div>
                 <p class="footer__paragraph">Copyright &copy; 2020 DEVLOVERS , All Rights Reserved.</p>
             </div>
         </footer>
