@@ -139,39 +139,19 @@
                         consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. </p>
                     <div class="row gutters-60">
+                        {% for skill in skills %}
                         <div class="col-md-4">
                             <div class="thumbnail text-center">
-                                <img src="{{ asset('build/images/adobe-photoshop.png') }}" alt="">
-                                <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
+                                <img src="{{ skill.img }}" alt="">
+                                <h4 class="skill__single-part__title">{{ skill.content }}</h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width:80%;background-color: #7FB7FA;">
+                                         style="width:{{ skill.level }}%;background-color: #7FB7FA;">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail text-center">
-                                <img src="{{ asset('build/images/adobe-illustrator.png') }}" alt="">
-                                <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width:80%;background-color: #FFAC1B;;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="thumbnail text-center">
-                                <img src=" {{ asset('build/images/adobe-after-effects.png') }}" alt="">
-                                <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar"
-                                         style="width:80%;background-color: #C99AFF;">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -348,12 +328,12 @@
 
         <footer class="footer footer--bg">
             <div class="container text-center">
-                <h1 class="footer__title">OBELA</h1>
+                <h1 class="footer__title">DEVLOVERS</h1>
                 <ul class="footer__contact-information">
-                    <li><a href="tel:5555555555"><i class="material-icons">phone</i> Hotline (+123) 45 67 89 21</a></li>
-                    <li><a href="mailto:sshariar458@gmail.com"><i class="material-icons">email</i>
-                            sshahriar458@gmail.com</a></li>
-                    <li><a href="#"><i class="material-icons">location_on</i> DartThemes address goes here.</a></li>
+                    <li><a href="tel:5555555555"><i class="material-icons">phone</i> {{ infos[0].phone }}</a></li>
+                    <li><a href="mailto:{{ infos[0].mail }}"><i class="material-icons">email</i>
+                            {{ infos[0].mail }}</a></li>
+                    <li><a href="#"><i class="material-icons">location_on</i> {{ infos[0].location}}</a></li>
                 </ul>
             </div>
             <hr style="border: 0;border-top: 1px solid #525B60;display:block;margin-top: 40px;">
@@ -366,7 +346,7 @@
                         <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
                     </ul>
                 </div>
-                <p class="footer__paragraph">Copyright &copy; 2017 DartThemes , All Rights Reserved.</p>
+                <p class="footer__paragraph">Copyright &copy; 2020 DEVLOVERS , All Rights Reserved.</p>
             </div>
         </footer>
     </div>
