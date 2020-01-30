@@ -74,7 +74,7 @@
                         <li>BACK END DEVELOPER<span class="padding">&#45;</span></li>
                         <li>DEV OPS</li>
                     </ul>
-                    <a class="header__button" href="#">VOUS AVEZ UN PROJET ? PARLONS-EN</a>
+                    <a class="header__button" href="mailto:{{ infos[0].mail }}">VOUS AVEZ UN PROJET ? PARLONS-EN</a>
                 </div>
                 <div class="social-icon pull-right">
                     <ul>
@@ -165,99 +165,41 @@
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                     <div class="row gutters-40">
+                    {% for project in projects %}
+                        {% if (project.id + 3) %3==0 %}
                         <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-a category-b category-c" data-order="1">
+                            <div class="portfolio__single-section mix category-a category-b category-c" data-order="{{ project.id + 1 }}">
                                 <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-1.png') }}" alt="">
+                                     src="{{ project.img }}" alt="">
                                 <div class="portfolio__single-section__overlay">
                                     <div class="overlay-content">
-                                        <h4>LOGO DESIGN</h4>
+                                        <h4>{{project.content}}</h4>
                                         <p>Designer</p>
                                     </div>
                                     <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
+                                        <a href="{{ project.link }}"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        {% else %}
                         <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-a category-c" data-order="2">
+                            <div class="portfolio__single-section mix category-a category-c" data-order="{{ project.id + 1 }}">
                                 <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-2.png') }}" alt="">
+                                     src="{{project.img}}" alt="">
                                 <div class="portfolio__single-section__overlay">
                                     <div class="overlay-content">
-                                        <h4>WEBSITE DESIGN</h4>
+                                        <h4>{{ project.content }}</h4>
                                         <p>Designer</p>
                                     </div>
                                     <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
+                                        <a href="{{ project.link }}"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-c" data-order="3">
-                                <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-3.png') }}" alt="">
-                                <div class="portfolio__single-section__overlay">
-                                    <div class="overlay-content">
-                                        <h4>LOGO DESIGN</h4>
-                                        <p>Designer</p>
-                                    </div>
-                                    <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src="{{ asset('build/images/search-icon.png') }}" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gutters-40">
-                        <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-b category-d" data-order="4">
-                                <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-4.png') }}" alt="">
-                                <div class="portfolio__single-section__overlay">
-                                    <div class="overlay-content">
-                                        <h4>PHOTOGRAPHY</h4>
-                                        <p>photographer</p>
-                                    </div>
-                                    <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src="{{ asset('build/images/search-icon.png') }}" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-b category-d" data-order="5">
-                                <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-5.png') }}" alt="">
-                                <div class="portfolio__single-section__overlay">
-                                    <div class="overlay-content">
-                                        <h4>WEBSITE DESIGN</h4>
-                                        <p>Designer</p>
-                                    </div>
-                                    <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src="{{ asset('build/images/search-icon.png') }}" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="portfolio__single-section mix category-d" data-order="6">
-                                <img class="portfolio__single-section__image img-responsive"
-                                     src="{{ asset('build/images/portfolio-6.png') }}" alt="">
-                                <div class="portfolio__single-section__overlay">
-                                    <div class="overlay-content">
-                                        <h4>LOGO DESIGN</h4>
-                                        <p>Designer</p>
-                                    </div>
-                                    <div class="portfolio__single-section__search-icon">
-                                        <a href="#"><img src="{{ asset('build/images/search-icon.png') }}" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -330,7 +272,7 @@
             <div class="container text-center">
                 <h1 class="footer__title">DEVLOVERS</h1>
                 <ul class="footer__contact-information">
-                    <li><a href="tel:5555555555"><i class="material-icons">phone</i> {{ infos[0].phone }}</a></li>
+                    <li><a href="tel: {{ infos[0].phone }}"><i class="material-icons">phone</i> {{ infos[0].phone }}</a></li>
                     <li><a href="mailto:{{ infos[0].mail }}"><i class="material-icons">email</i>
                             {{ infos[0].mail }}</a></li>
                     <li><a href="#"><i class="material-icons">location_on</i> {{ infos[0].location}}</a></li>

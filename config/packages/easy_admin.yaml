@@ -1,8 +1,26 @@
 easy_admin:
     entities:
-        - App\Entity\Blog
-        - App\Entity\Infos
-        - App\Entity\Project
-        - App\Entity\Skills
-
+        Infos:
+            class: App\Entity\Infos
+        Project:
+            class: App\Entity\Project
+            new:
+                fields:
+                    - {property: 'Title'}
+                    - {property: 'content'}
+                    - {property: 'link'}
+                    - {property: 'img', type: 'file'}
+        Blog:
+            class: App\Entity\Blog
+        Skills:
+            class: App\Entity\Skills
+            new:
+                fields:
+                    - {property: 'content'}
+                    - {property: 'level'}
+                    - {property: 'img', type: 'file'}
+                edit:
+                    - {property: 'content'}
+                    - {property: 'level'}
+                    - {property: 'img', type: 'file'}
 
