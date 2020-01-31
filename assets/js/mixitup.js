@@ -10647,3 +10647,4 @@
     mixitup.NAME = 'mixitup';
     mixitup.CORE_VERSION = '3.2.1';
 })(window);
+

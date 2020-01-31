@@ -27,19 +27,19 @@
                                 <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">A propos de moi</a>
+                                <a class="nav-link" href="#ABOUT_ME">A propos de moi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mes compétences</a>
+                                <a class="nav-link" href="#mes_competences">Mes compétences</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mes projets</a>
+                                <a class="nav-link" href="#mon-portfolio">Mes projets</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" href="#mes_articles">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Me contacter</a>
+                                <a class="nav-link" href="#contact">Me contacter</a>
                             </li>
                         </ul>
                     </div>
@@ -49,26 +49,30 @@
                                 <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">A propos de moi</a>
+                                <a class="nav-link" href="#ABOUT_ME">A propos de moi</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mes compétences</a>
+                                <a class="nav-link" href="#mes_competences">Mes compétences</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mes projets</a>
+                                <a class="nav-link" href="#mon-portfolio">Mes projets</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <a class="nav-link" href="#mes_articles">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Me contacter</a>
+                                <a class="nav-link" href="#contact">Me contacter</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div class="header__content text-center">
-                    <span class="header__content__block">BONJOUR</span>
-                    <h1 class="header__content__title">Je suis Côme de Mauroy</h1>
+                <div class="header__content text-center" >
+                    <div style="height: 250px">
+                    <span class="header__content__block">BONJOUR !</span> <br>
+                    <h1 class="header__content__title">Je suis </h1>
+                    <h1 class="header__content__title" id="text"></h1>
+                    <span id="cursor" style="display:inline-block "></span>
+                </div>
                     <ul class="header__content__sub-title">
                         <li>SCRUM MASTER<span class="padding">&#45;</span></li>
                         <li>BACK END DEVELOPER<span class="padding">&#45;</span></li>
@@ -82,7 +86,7 @@
         <section class="about">
             <div class="container about__container--narrow">
                 <div class="page-section">
-                    <h2 class="page-section__title">A PROPOS DE MOI</h2>
+                    <h2 class="page-section__title" id="ABOUT_ME">A PROPOS DE MOI</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -113,10 +117,10 @@
             </div>
         </section>
 
-        <section class="skill skill--bg">
+        <section class="skill skill--bg pt-1">
             <div class="container skill__container--narrow">
-                <div class="page-section">
-                    <h2 class="page-section__title page-section__title--white">MES COMPETENCES</h2>
+                <div class="pt-5 pb-5">
+                    <h2 class="page-section__title page-section__title--white" id="mes_competences">MES COMPETENCES</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style-white.png') }}"
                          alt="">
                     <p class="page-section__paragraph page-section__paragraph--white">Lorem ipsum dolor sit amet,
@@ -130,7 +134,7 @@
                                 <h4 class="skill__single-part__title">{{ skill.content }}</h4>
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar"
-                                         style="width:{{ skill.level }}%;background-color: #7FB7FA;">
+                                         style="width:{{ skill.level }}%;background-color: #FF9C07;">
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +148,7 @@
         <section class="portfolio">
             <div class="container">
                 <div class="page-section">
-                    <h2 class="page-section__title">MON PORTFOLIO</h2>
+                    <h2 class="page-section__title" id="mon-portfolio">MON PORTFOLIO</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -158,7 +162,7 @@
                                 <div class="portfolio__single-section__overlay">
                                     <div class="overlay-content">
                                         <h4>{{project.content}}</h4>
-                                        <p>Designer</p>
+                                        <p>Web-developpement</p>
                                     </div>
                                     <div class="portfolio__single-section__search-icon">
                                         <a href="{{ project.link }}"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
@@ -174,7 +178,7 @@
                                 <div class="portfolio__single-section__overlay">
                                     <div class="overlay-content">
                                         <h4>{{ project.content }}</h4>
-                                        <p>Designer</p>
+                                        <p>Back-end & front-end developpement</p>
                                     </div>
                                     <div class="portfolio__single-section__search-icon">
                                         <a href="{{ project.link }}"><img src=" {{ asset('build/images/search-icon.png') }}" alt=""></a>
@@ -206,7 +210,7 @@
         <section class="blog">
             <div class="container">
                 <div class="page-section">
-                    <h2 class="page-section__title">MES ARTICLES</h2>
+                    <h2 class="page-section__title" id="mes_articles">MES ARTICLES</h2>
                     <img class="page-section__title-style" src="{{ asset('build/images/title-style.png') }}" alt="">
                     <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -227,7 +231,7 @@
             </div>
         </section>
 
-        <footer class="footer footer--bg">
+        <footer class="footer footer--bg" id="contact">
             <div class="container text-center">
                 <h1 class="footer__title">DEVLOVERS</h1>
                 <ul class="footer__contact-information">
@@ -243,4 +247,83 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        var _CONTENT = [
+            "Côme de Mauroy",
+            "Développeur Back-end",
+            "GIT MASTER",
+            "SRUM MASTER",
+            "Disponible",
+            "A l'écoute"
+
+        ];
+
+        // Current sentence being processed
+        var _PART = 0;
+
+        // Character number of the current sentence being processed
+        var _PART_INDEX = 0;
+
+        // Holds the handle returned from setInterval
+        var _INTERVAL_VAL;
+
+        // Element that holds the text
+        var _ELEMENT = document.querySelector("#text");
+
+        // Cursor element
+        var _CURSOR = document.querySelector("#cursor");
+
+        // Implements typing effect
+        function Type() {
+            // Get substring with 1 characater added
+            var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX++;
+
+            // If full sentence has been displayed then start to delete the sentence after some time
+            if(text === _CONTENT[_PART]) {
+                // Hide the cursor
+                _CURSOR.style.display = 'visible';
+
+                clearInterval(_INTERVAL_VAL);
+                setTimeout(function() {
+                    _INTERVAL_VAL = setInterval(Delete, 50);
+                }, 1000);
+            }
+        }
+
+        // Implements deleting effect
+        function Delete() {
+            // Get substring with 1 characater deleted
+            var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+            _ELEMENT.innerHTML = text;
+            _PART_INDEX--;
+
+            // If sentence has been deleted then start to display the next sentence
+            if(text === '') {
+                clearInterval(_INTERVAL_VAL);
+
+                // If current sentence was last then display the first one, else move to the next
+                if(_PART == (_CONTENT.length - 1))
+                    _PART = 0;
+                else
+                    _PART++;
+
+                _PART_INDEX = 0;
+
+                // Start to display the next sentence after some time
+                setTimeout(function() {
+                    _CURSOR.style.display = 'inline-block';
+                    _INTERVAL_VAL = setInterval(Type, 100);
+                }, 200);
+            }
+        }
+
+        // Start the typing effect on load
+        _INTERVAL_VAL = setInterval(Type, 150);
+
+
+    </script>
+
 {% endblock %}

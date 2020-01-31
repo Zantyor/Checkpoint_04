@@ -91,7 +91,7 @@ html,body {
   right: 0;
   top: 0;
   bottom: 0;
-  background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
+  background: -webkit-linear-gradient(90deg, #ff9c07 0%, rgba(253, 86, 129, 0.9) 100%);
   z-index: -1;
 }
 
@@ -339,7 +339,7 @@ html,body {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(120, 88, 221, .9);
+  background:-webkit-linear-gradient(90deg, #ff9c07 0%, rgba(253, 86, 129, 0.9) 100%);
   z-index: -1;
 }
 
@@ -495,6 +495,7 @@ html,body {
 .portfolio__single-section__image{
  display: block;
  height: auto;
+ max-width: 100%;
 }
 
 .portfolio__single-section h4{
@@ -536,7 +537,7 @@ html,body {
   opacity: 0;
   -webkit-transition: .3s ease;
   transition: .3s ease;
-  background-color: rgba(133, 91, 249, .9);
+  background:-webkit-linear-gradient(90deg, #ff9c07 0%, rgba(253, 86, 129, 0.9) 100%);
   border-radius: 10px;
 }
 
@@ -835,7 +836,7 @@ html,body {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(120, 88, 221, .9);
+  background:-webkit-linear-gradient(90deg, #ff9c07 0%, rgba(253, 86, 129, 0.9) 100%);
   z-index: -1;
 }
 
@@ -970,4 +971,55 @@ html,body {
 }
 .nav-link{
   color: white!important;
+}
+.thumbnail{
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+#cursor{
+  width: 0.25vw;
+  height: 40px;
+  background-color: white;
+  animation: blink 0.9s step-end infinite;
+}
+@keyframes blink {
+  from, to {
+    background-color: transparent ;
+  }
+  17.5% {
+    background-color: rgba(255, 255, 255, 0.25)
+  }
+  30% {
+    background-color: rgba(255, 255, 255, 0.5)
+  }
+  42.5% {
+    background-color: rgba(255, 255, 255, 0.75)
+  }
+  50% {
+    background-color: white;
+  }
+  67.5% {
+    background-color: rgba(255, 255, 255, 0.75)
+  }
+  75% {
+    background-color: rgba(255, 255, 255, 0.5)
+  }
+  93.5% {
+    background-color: rgba(255, 255, 255, 0.25)
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+#text {
+  display: inline-block;
+  vertical-align: left;
 }
